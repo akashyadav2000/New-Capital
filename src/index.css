@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Georama:wght@200;300;400;500;600;700;800;900&family=Great+Vibes&family=Lobster&family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap");
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  letter-spacing: 1px;
+  background-color: #000000;
+}
+
+@media (max-width: 500px) {
+  body {
+    letter-spacing: 0.2px;
+  }
+}
+
+button {
+  letter-spacing: 2px;
+}
+
+:root {
+  --color-primary: #ffb700;
+  --color-secondary: #222222;
+  --color-gray: rgba(255, 255, 255, 0.75);
+  --color-black: #000000;
+  --color-black-yellow: #66490076;
+}
+
+@layer utilities {
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+  .text-primary {
+    color: var(--color-primary);
+  }
+  .bg-secondary {
+    background-color: var(--color-secondary);
+  }
+  .text-secondary {
+    color: var(--color-secondary);
+  }
+  .text-gray {
+    color: var(--color-gray);
+  }
+  .bg-main {
+    background-color: var(--color-black);
+  }
+  .bg-header {
+    background-color: var(--color-black-yellow);
+  }
+}
+
+:root {
+  --font-georama: "Georama", sans-serif;
+  --font-great-vibes: "Great Vibes", cursive;
+  --font-lobster: "Lobster", cursive;
+  --font-poppins: "Poppins", sans-serif;
+  --font-roboto-serif: "Roboto Serif", serif;
+}
+
+@layer utilities {
+  .font-georama {
+    font-family: var(--font-georama);
+  }
+  .font-great-vibes {
+    font-family: var(--font-great-vibes);
+  }
+  .font-lobster {
+    font-family: var(--font-lobster);
+  }
+  .font-poppins {
+    font-family: var(--font-poppins);
+  }
+  .font-roboto-serif {
+    font-family: var(--font-roboto-serif);
+  }
+}
+
+/* Add special styles to the active link */
+.header-links li a.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -25%;
+  background-color: #ffb700;
+  width: 100%;
+  height: 2px;
+}
+
+@media (max-width: 780px) {
+  .header-links li a.active::before {
+    bottom: -70%;
+  }
+}
+
+.main-btn:hover .arrow {
+  display: block;
+  right: 0;
+}
+
+.react-tel-input .flag-dropdown {
+  border: none !important;
+}
+
+.react-tel-input .selected-flag .flag {
+  scale: 1.7;
+}
+
+.react-tel-input .selected-flag {
+  background-color: #ffffff;
+  border: 1px solid #80808070;
+}
+
+.react-tel-input .selected-flag .arrow {
+  left: 22px;
+}
+
+input,
+textarea {
+  border: 1px solid #80808070;
+  border-radius: 4px;
+}
